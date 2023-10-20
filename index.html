@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+        defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="navbar navbar-light bg-light nav-header p-3">
+        <div class="container">
+            <div class="row">
+                <div class="d-flex">
+                    <div class="social-media d-none d-md-block px-sm-2">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <form action="" class=" input-group w-auto ps-4 me-5">
+                            <input type="search" class="form-control border-dark shadow-none"
+                                placeholder="جستجوی فیلم،سریال،انیمیشن..." aria-label="search"
+                                aria-describedby="search-addon">
+                            <span class="btn btn-search text-white bg-dark" id="search-addon">
+                                <i class="fa fa-search text-danger "></i>
+                            </span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="pe-4 left-btn position-relative d-none d-lg-block">
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signUp">وارد شوید/ ثبت نام
+                        <span class="fa fa-user me-2"></span>
+                    </button>
+
+                    <div class="modal fade" id="signUp" tabindex="-1" aria-labelledby="signUp" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-sm">
+                            <div class="modal-content modal-head">
+                                <div class="modal-body">
+                                    <div class="d-flex">
+
+                                        <div class="p-4">
+                                            <p class="h4 mb-4 pb-2 border-bottom">
+                                                ورود
+                                            </p>
+
+                                            <form action="#">
+                                                <div class="mb-3">
+                                                    <label for="email" class="pb-2">آدرس ایمیل</label>
+                                                    <input type="email" class="form-control" id="email">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="name" class="pb-2">رمز عبور</label>
+                                                    <input type="password" class="form-control" id="name">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="submit" value="ورود" class="btn btn-danger text-white">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <p class="custom-note text-warning fw-bolder">
+                                                        <small>
+                                                            هنوز حساب کاربری ندارید؟
+                                                            <a href="#" class="text-danger">ایجاد یک حساب کاربری</a>
+                                                        </small>
+                                                    </p>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-body__img flex-sm-wrap">
+                                            <img src="assets/images/public.avif" alt="img"
+                                                class="img-fluid w-100 h-100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="container-fluid sticky-top">
+            <button class="btn-bar bg-danger pt-1 px-2 mt-2 rounded-2 d-lg-none d-sm-block " type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation">
+                <span>
+                    <i class="fa fa-bars"></i>
+                </span>
+            </button>
+            <!-- <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" alt="">
+            </a> -->
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <i class="fa fa-close"></i>
+                    </button>
+                </div>
+                <div class="offcanvas-body" data-bs-scroll="true">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">صفحه اصلی</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                سریال ها
+                                <i class="fa fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu w-100">
+                                <li><a class="dropdown-item pb-2" href="#"> سریال های جدید</a></li>
+                                <li><a class="dropdown-item pb-2" href="#">سریال های برتر</a></li>
+                                <li><a class="dropdown-item pb-2 border-0" href="#"> سریال های تمام شده</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown w-100">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                فیلم ها
+                                <i class="fa fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu w-100">
+                                <li><a class="dropdown-item pb-2" href="#"> فیلم های جدید</a></li>
+                                <li><a class="dropdown-item pb-2" href="#">فیلم های برتر</a></li>
+                                <li><a class="dropdown-item pb-2 border-0" href="#"> فیلم های کلاسیک</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">سوالات متداول</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">درباره ما</a>
+                        </li>
+                        <div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">تماس با ما</a>
+                            </li>
+
+                        </div>
+
+                    </ul>
+
+                    <div class="pe-4 left-btn ">
+                        <button class="btn btn-danger">وارد شوید/ ثبت نام
+                            <span class="fa fa-user me-2"></span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <ul class="nav nav-tabs d-flex justify-content-center d-none d-lg-flex">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active text-danger bg-dark" aria-current="page">صفحه اصلی</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">سریال</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">سریال های برتر</a>
+                        <a class="dropdown-item" href="#">سریال های تمام شده</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">سریال های جدید</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">فیلم</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">فیلم های برتر</a>
+                        <a class="dropdown-item" href="#">فیلم های تمام شده</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">فیلم های جدید</a>
+                    </div>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link  text-white" href="#">سوالات متداول</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-white" href="#">درباره ما</a>
+                </li>
+                <div>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#callUs" href="#">تماس با
+                            ما</a>
+                    </li>
+                    <div class="modal fade" id="callUs" tabindex="-1" aria-labelledby="callUs" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-sm">
+                            <div class="modal-content modal-nav">
+                                <div class="modal-body d-flex">
+                                    <div class="d-flex w-50">
+                                        <div class="p-4">
+                                            <p class="h5 mb-4 pb-2 border-bottom ">
+                                                تکمیل فرم درخواست
+                                            </p>
+                                            <form action="#">
+                                                <div class="mb-3">
+                                                    <label for="email" class="pb-2">آدرس ایمیل</label>
+                                                    <input type="email" class="form-control" id="email">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="name" class="pb-2">رمز عبور</label>
+                                                    <input type="password" class="form-control" id="name">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="submit" value="ورود" class="btn btn-danger">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <p class="custom-note text-warning fw-bolder">
+                                                        <small>
+                                                            هنوز حساب کاربری ندارید؟
+                                                            <a href="#" class="text-danger">ایجاد یک حساب کاربری</a>
+                                                        </small>
+                                                    </p>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-body__img flex-sm-wrap">
+                                        </div>
+                                    </div>
+                                    <div class="w-50 p-4">
+                                        <p class="h5 mb-4 pb-2 border-bottom ">
+                                            راه های ارتباطی
+                                        </p>
+                                        <p class="h5">
+                                            در تماس باشید
+                                        </p>
+                                        <p>
+                                            جهت تماس با مدیریت سایت از طریق راه های زیر در ارتباط باشید :
+                                        </p>
+                                        <div class="mt-5">
+                                            <div class="d-flex ">
+                                                <i class="fa fa-home fa-3x text-danger"></i>
+                                                <div class="pe-3">
+                                                    <p>پست الکترونیکی
+                                                        spigoodarzi@gmail.com
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex ">
+                                                <i class="fa fa-phone fa-3x text-danger"></i>
+                                                <div class="pe-3 mt-3">
+                                                    <p>989386683624+</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <!-- ---------------------------------------animation------------------------------ -->
+    <section class="cat-animation mt-4 position-relative">
+        <div class="animation p-sm-5">
+            <span style="--i:1;"><img src="assets/images/avatar.jpg" alt=""></span>
+            <span style="--i:2;"><img src="assets/images/Vikings wallpaper1900.jpg" alt=""></span>
+            <span style="--i:3;"><img src="assets/images/whlking dead.jpg" alt=""></span>
+            <span style="--i:4;"><img src="assets/images/breaking bad.jpg" alt=""></span>
+            <span style="--i:5;"><img src="assets/images/no-face-and-chihiro.jpg" alt=""></span>
+            <span style="--i:6;"><img src="assets/images/No-One-Will-Save-You.webp" alt=""></span>
+            <span style="--i:7;"><img src="assets/images/harrypotter.jpeg" alt=""></span>
+            <span style="--i:8;"><img src="assets/images/ponyo-2008-scaled.jpg" alt=""></span>
+        </div>
+        <div class="flash-down"
+            style="position: absolute; bottom:-15px; font-size: 50px; opacity: 0.5; color: rgb(0, 0, 0); ">
+            <i class="fa fa-angle-down"></i>
+        </div>
+    </section>
+    <!---------------------------------------iframe teaser-------------------------->
+    <section class="position-relative">
+        <div class=" container-fluid">
+            <div class="row mt-3 p-3">
+                <div class=" col-sm-12 col-md-12 col-lg-8 mb-5">
+                    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true"
+                                aria-label="First slide"></li>
+                            <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                            <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                </style>
+                                <div class="h_iframe-aparat_embed_frame"><span
+                                        style="display: block;padding-top: 57%"></span><iframe
+                                        src="https://www.aparat.com/video/video/embed/videohash/dVIgA/vt/frame"
+                                        allowFullScreen="true" webkitallowfullscreen="true"
+                                        mozallowfullscreen="true"></iframe></div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="h_iframe-aparat_embed_frame"><span
+                                        style="display: block;padding-top: 57%"></span><iframe
+                                        src="https://www.aparat.com/video/video/embed/videohash/apczo/vt/frame"
+                                        allowFullScreen="true" webkitallowfullscreen="true"
+                                        mozallowfullscreen="true"></iframe></div>
+                            </div>
+                            <div class="carousel-item">
+                                </style>
+                                <div class="h_iframe-aparat_embed_frame"><span
+                                        style="display: block;padding-top: 57%"></span><iframe
+                                        src="https://www.aparat.com/video/video/embed/videohash/Uc8Bl/vt/frame"
+                                        allowFullScreen="true" webkitallowfullscreen="true"
+                                        mozallowfullscreen="true"></iframe></div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselId"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4 cat-right gy-3">
+                    <div class="d-flex cat-card-right mb-3">
+                        <div class="card border-0 cat-card__img">
+                            <a href="#">
+                                <img src="assets/images/all of us.jpg" alt="all of us">
+                            </a>
+                        </div>
+                        <div class="card-body position-relative">
+                            <a href="#">
+                                <h2>"all of us"</h2>
+                            </a>
+                            <h5>watch the teaser</h5>
+
+                            <div>
+                                <a href="#">
+                                    <span class="fa fa-play-circle-o position-absolute bottom-00 text-white">
+                                    </span>
+                                </a>
+                                <i class="position-absolute text-danger">1:03</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex cat-card-right mb-3">
+                        <div class="card border-0 cat-card__img">
+                            <a href="#">
+                                <img src="assets/images/small.jpg" alt="all of us">
+                            </a>
+                        </div>
+                        <div class="card-body position-relative">
+                            <a href="#">
+                                <h2>"no small parts"</h2>
+                            </a>
+                            <h5>all about no small parts</h5>
+
+                            <div>
+                                <a href="#">
+                                    <span class="fa fa-play-circle-o position-absolute bottom-00 text-white">
+                                    </span>
+                                </a>
+                                <i class="position-absolute text-danger">1:28</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex cat-card-right">
+                        <div class="card border-0  cat-card__img">
+                            <a href="#">
+                                <img src="assets/images/tick and morty.jpg" alt="all of us">
+                            </a>
+                        </div>
+                        <div class="card-body position-relative">
+                            <a href="#">
+                                <h2>"rick and morty"</h2>
+                            </a>
+                            <h5>watch the teaser</h5>
+
+                            <div>
+                                <a href="#">
+                                    <span class="fa fa-play-circle-o position-absolute text-white">
+                                    </span>
+                                </a>
+                                <i class="position-absolute text-danger">1:08</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 browse">
+                        <a href="#">
+                            <p class="position-relative my-5">
+                                ادامه
+                                <i class="fa fa-angle-left position-absolute ms-3 mt-1"></i>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape">
+            <div class="shape1"><img src="assets/images/shape1.png" alt="shape"></div>
+            <div class="shape2 rotateme"><img src="assets/images/shape2.svg" alt="shape"></div>
+            <div class="shape3"><img src="assets/images/shape3.svg" alt="shape"></div>
+            <div class="shape4"><img src="assets/images/shape4.svg" alt="shape"></div>
+            <div class="shape5"><img src="assets/images/shape5.png" alt="shape"></div>
+            <div class="shape6 rotateme"><img src="assets/images/shape4.svg" alt="shape"></div>
+            <div class="shape7"><img src="assets/images/shape4.svg" alt="shape"></div>
+            <div class="shape8 rotateme"><img src="assets/images/shape2.svg" alt="shape"></div>
+            <div class="shape1"><img src="assets/images/shape1.png" alt="shape"></div>
+            <div class="shape2 rotateme"><img src="assets/images/shape2.svg" alt="shape"></div>
+            <div class="shape3"><img src="assets/images/shape3.svg" alt="shape"></div>
+            <div class="shape5"><img src="assets/images/shape5.png" alt="shape"></div>
+        </div>
+    </section>
+    <!-- --------------------------------- slider anime ----------------------------- -->
+    <section id="slide-anime" class="px-3 position-relative">
+        <div class="container position-relative">
+            <div class="d-flex justify-content-between anime ">
+                <h2 class="text-white mt-5 mb-4 me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-film" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z" />
+                    </svg>
+                    انیمیشن
+                </h2>
+                <h2 class="mt-5 position-relative ms-4 more">
+                    <a href="" class="text-white">
+                        بیشتر
+                        <i class="fa fa-angle-left position-absolute my-1 pe-1"></i>
+                    </a>
+                </h2>
+            </div>
+            <div dir="ltr"
+                class="swiffy-slider slider-item-show6 slider-nav-outside-expand slider-nav-round slider-nav-page px-2">
+                <ul class="slider-container slider-anime">
+                    <li>
+                        <div class=" slider-item border-0">
+                            <img src="assets/images/how-to-train-your-dragon-2010-scaled.jpg"
+                                class="card-img-top img-fluid" loading="lazy" alt="...">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-item border-0">
+                            <img src="assets/images/minion.jpg" class="card-img-top img-fluid" loading="lazy" alt="...">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-item border-0">
+                            <img src="assets/images/the-nightmare-before-christmas-1994-e1569254637159-scaled.jpg"
+                                class="card-img-top img-fluid" loading="lazy" alt="...">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-item border-0">
+                            <img src="assets/images/shutterstock_editorial_1561658a-scaled.jpg"
+                                class="card-img-top img-fluid" loading="lazy" alt="...">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-item border-0">
+                            <img src="assets/images/ponyo-2008-scaled.jpg" class="card-img-top img-fluid" loading="lazy"
+                                alt="...">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-item border-0">
+                            <img src="assets/images/no-face-and-chihiro.jpg" class="card-img-top img-fluid"
+                                loading="lazy" alt="...">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-item border-0">
+                            <img src="assets/images/kung-fu-panda-2008.jpg" class="card-img-top img-fluid"
+                                loading="lazy" alt="...">
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-item border-0">
+                            <img src="assets/images/home-2015-scaled.jpg" class="card-img-top img-fluid" loading="lazy"
+                                alt="...">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-item border-0">
+                            <img src="assets/images/kung-fu-panda-2008.jpg" class="card-img-top img-fluid"
+                                loading="lazy" alt="...">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-item border-0">
+                            <img src="assets/images/frozen-19-aug-2013-scaled.jpg" class="card-img-top img-fluid"
+                                loading="lazy" alt="...">
+                        </div>
+                    </li>
+                </ul>
+
+                <button type="button" class="slider-nav" aria-label="Go left"></button>
+                <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+            </div>
+        </div>
+        <div class="shape">
+            <div class="shape1"><img src="assets/images/shape1.png" alt="shape"></div>
+            <div class="shape2 rotateme"><img src="assets/images/shape2.svg" alt="shape"></div>
+            <div class="shape3"><img src="assets/images/shape3.svg" alt="shape"></div>
+            <div class="shape4"><img src="assets/images/shape4.svg" alt="shape"></div>
+            <div class="shape5"><img src="assets/images/shape5.png" alt="shape"></div>
+            <div class="shape6 rotateme"><img src="assets/images/shape4.svg" alt="shape"></div>
+            <div class="shape7"><img src="assets/images/shape4.svg" alt="shape"></div>
+            <div class="shape8 rotateme"><img src="assets/images/shape2.svg" alt="shape"></div>
+            <div class="shape1"><img src="assets/images/shape1.png" alt="shape"></div>
+            <div class="shape2 rotateme"><img src="assets/images/shape2.svg" alt="shape"></div>
+            <div class="shape3"><img src="assets/images/shape3.svg" alt="shape"></div>
+            <div class="shape5"><img src="assets/images/shape5.png" alt="shape"></div>
+        </div>
+    </section>
+    <!-- --------------------------------silde movie----------------------- -->
+    <section id="slide-movie" class="position-relative">
+        <div class="container">
+            <div class="row mt-5 movie g-4">
+                <div class="d-flex justify-content-between">
+                    <h2 class="text-white mt-5 me-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-film" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z" />
+                        </svg>
+                        فیلم
+                    </h2>
+                    <h2 class="mt-5 position-relative ms-4 more">
+                        <a href="" class="text-white">
+                            بیشتر
+                            <i class="fa fa-angle-left position-absolute my-1 pe-1"></i>
+                        </a>
+                    </h2>
+                </div>
+
+                <div dir="ltr"
+                    class="swiffy-slider slider-item-show6 slider-nav-outside-expand slider-nav-round slider-nav-page ">
+                    <ul class="slider-container">
+                        <li class="movie-cat">
+                            <div class="card movie-cat-card">
+                                <div class="img-box position-relative">
+                                    <span class="img-mask"></span>
+                                    <div>
+                                        <img class="card-img-top img-fluid" src="assets/images/Blue-Beetle-2023.jpg"
+                                            alt="Card image cap">
+                                    </div>
+                                    <a href="#" class="img-badge img-badge1">تخیلی</a>
+                                    <a href="#" class="img-badge img-badge2">اکشن</a>
+                                    <!-- <div class="overlay text-end p-4">
+                                        <h3 class="genres">
+                                            <span class="">
+                                                درام
+                                            </span>
+                                        </h3>
+                                    </div> -->
+                                </div>
+                                <div class="card-body movie-cat-body">
+                                    <span class="fa fa-star text-danger">
+                                        <i class="text-white">6.3</i>
+                                    </span>
+                                    <span class="fa fa-star-o ms-3 star text-info"></span>
+                                    <p class="card-text text-white mt-1">Blue Beetle</p>
+                                </div>
+
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item watch">
+                                        <a href="">
+                                            Watch option
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item trailer">
+                                        <a href="">
+                                            Trailer
+                                            <i class="fa fa-play"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="movie-cat">
+                            <div class="card movie-cat-card">
+                                <div class="img-box position-relative">
+                                    <div class="img-mask"></div>
+                                    <div>
+                                        <img class="card-img-top img-fluid" src="assets/images/barbie-poster-v3.jpg"
+                                            alt="Card image cap">
+                                    </div>
+                                    <a href="#" class="img-badge img-badge1">فانتزی</a>
+                                    <a href="#" class="img-badge img-badge2">کمدی</a>
+                                    <!-- <div class="overlay text-end p-4">
+                                        <h3 class="genres">
+                                            <span class="">
+                                                درام
+                                            </span>
+                                        </h3>
+                                    </div> -->
+                                </div>
+
+                                <div class="card-body movie-cat-body">
+                                    <span class="fa fa-star text-danger">
+                                        <i class="text-white">6.1</i>
+                                    </span>
+                                    <span class="fa fa-star-o ms-3 star text-info"></span>
+                                    <p class="card-text text-white mt-1">Barbie</p>
+                                </div>
+
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item watch">
+                                        <a href="">
+                                            Watch option
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item trailer">
+                                        <a href="">
+                                            Trailer
+                                            <i class="fa fa-play"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="movie-cat">
+                            <div class="card movie-cat-card">
+                                <div class="img-box position-relative">
+                                    <div class="img-mask"></div>
+                                    <div>
+                                        <img class="card-img-top img-fluid" src="assets/images/ninja (2).jpg"
+                                            alt="Card image cap">
+                                    </div>
+                                    <a href="#" class="img-badge img-badge1">تخیلی</a>
+                                    <a href="#" class="img-badge img-badge2">ماجرایی</a>
+                                    <!-- <div class="overlay text-end p-4">
+                                        <h3 class="genres">
+                                            <span class="">
+                                                درام
+                                            </span>
+                                        </h3>
+                                    </div> -->
+                                </div>
+
+                                <div class="card-body movie-cat-body">
+                                    <span class="fa fa-star text-danger">
+                                        <i class="text-white">6.9</i>
+                                    </span>
+                                    <span class="fa fa-star-o ms-3 star text-info"></span>
+                                    <p class="card-text text-white mt-1">Ninja</p>
+                                </div>
+
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item watch">
+                                        <a href="">
+                                            Watch option
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item trailer">
+                                        <a href="">
+                                            Trailer
+                                            <i class="fa fa-play"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="movie-cat">
+                            <div class="card movie-cat-card">
+                                <div class="img-box position-relative">
+                                    <div class="img-mask"></div>
+                                    <div>
+                                        <img class="card-img-top img-fluid" src="assets/images/ome piece (6).jpg"
+                                            alt="Card image cap">
+                                    </div>
+                                    <a href="#" class="img-badge img-badge1">تخیلی</a>
+                                    <a href="#" class="img-badge img-badge2">اکشن</a>
+                                    <!-- <div class="overlay text-end p-4">
+                                        <h3 class="genres">
+                                            <span class="">
+                                                درام
+                                            </span>
+                                        </h3>
+                                    </div> -->
+                                </div>
+
+                                <div class="card-body movie-cat-body">
+                                    <span class="fa fa-star text-danger">
+                                        <i class="text-white">7.9</i>
+                                    </span>
+                                    <span class="fa fa-star-o ms-3 star text-info"></span>
+                                    <p class="card-text text-white mt-1">One piece</p>
+                                </div>
+
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item watch">
+                                        <a href="">
+                                            Watch option
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item trailer">
+                                        <a href="">
+                                            Trailer
+                                            <i class="fa fa-play"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="movie-cat">
+                            <div class="card movie-cat-card">
+                                <div class="img-box position-relative">
+                                    <div class="img-mask"></div>
+                                    <div>
+                                        <img class="card-img-top img-fluid" src="assets/images/the boogeyman.jpg"
+                                            alt="Card image cap">
+                                    </div>
+                                    <a href="#" class="img-badge img-badge1">تخیلی</a>
+                                    <a href="#" class="img-badge img-badge2">ترسناک</a>
+                                    <!-- <div class="overlay text-end p-4">
+                                        <h3 class="genres">
+                                            <span class="">
+                                                درام
+                                            </span>
+                                        </h3>
+                                    </div> -->
+                                </div>
+
+                                <div class="card-body movie-cat-body">
+                                    <span class="fa fa-star text-danger">
+                                        <i class="text-white">5.9</i>
+                                    </span>
+                                    <span class="fa fa-star-o ms-3 star text-info"></span>
+                                    <p class="card-text text-white mt-1">The boogeyman</p>
+                                </div>
+
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item watch">
+                                        <a href="">
+                                            Watch option
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item trailer">
+                                        <a href="">
+                                            Trailer
+                                            <i class="fa fa-play"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="movie-cat">
+                            <div class="card movie-cat-card">
+                                <di class="img-box position-relative">
+                                    <div class="img-mask"></div>
+                                    <div>
+                                        <img class="card-img-top img-fluid" src="assets/images/Blue-Beetle-2023.jpg"
+                                            alt="Card image cap">
+                                    </div>
+                                    <a href="#" class="img-badge img-badge1">تخیلی</a>
+                                    <a href="#" class="img-badge img-badge2">اکشن</a>
+                                    <!-- <div class="overlay text-end p-4">
+                                        <h3 class="genres">
+                                            <span class="">
+                                                درام
+                                            </span>
+                                        </h3>
+                                    </div> -->
+                                </di>
+
+                                <div class="card-body movie-cat-body">
+                                    <span class="fa fa-star text-danger">
+                                        <i class="text-white">6.5</i>
+                                    </span>
+                                    <span class="fa fa-star-o ms-3 star text-info"></span>
+                                    <p class="card-text text-white mt-1">Blue Beetle</p>
+                                </div>
+
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item watch">
+                                        <a href="">
+                                            Watch option
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item trailer">
+                                        <a href="">
+                                            Trailer
+                                            <i class="fa fa-play"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="movie-cat">
+                            <div class="card movie-cat-card">
+                                <div class="img-box position-relative">
+                                    <div class="img-mask"></div>
+                                    <div>
+                                        <img class="card-img-top img-fluid" src="assets/images/Blue-Beetle-2023.jpg"
+                                            alt="Card image cap">
+                                    </div>
+                                    <a href="#" class="img-badge img-badge1">تخیلی</a>
+                                    <a href="#" class="img-badge img-badge2">اکشن</a>
+                                    <!-- <div class="overlay text-end p-4">
+                                        <h3 class="genres">
+                                            <span class="">
+                                                درام
+                                            </span>
+                                        </h3>
+                                    </div> -->
+                                </div>
+
+                                <div class="card-body movie-cat-body">
+                                    <span class="fa fa-star text-danger">
+                                        <i class="text-white">6.3</i>
+                                    </span>
+                                    <span class="fa fa-star-o ms-3 star text-info"></span>
+                                    <p class="card-text text-white mt-1">Blue Beetle</p>
+                                </div>
+
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item watch">
+                                        <a href="">
+                                            Watch option
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item trailer">
+                                        <a href="">
+                                            Trailer
+                                            <i class="fa fa-play"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="movie-cat">
+                            <div class="card movie-cat-card">
+                                <div class="img-box position-relative">
+                                    <div class="img-mask"></div>
+                                    <div>
+                                        <img class="card-img-top img-fluid" src="assets/images/Blue-Beetle-2023.jpg"
+                                            alt="Card image cap">
+                                    </div>
+                                    <a href="#" class="img-badge img-badge1">تخیلی</a>
+                                    <a href="#" class="img-badge img-badge2">اکشن</a>
+                                    <!-- <div class="overlay text-end p-4">
+                                        <h3 class="genres">
+                                            <span class="">
+                                                درام
+                                            </span>
+                                        </h3>
+                                    </div> -->
+                                </div>
+
+                                <div class="card-body movie-cat-body">
+                                    <span class="fa fa-star text-danger">
+                                        <i class="text-white">6.3</i>
+                                    </span>
+                                    <span class="fa fa-star-o ms-3 star text-info"></span>
+                                    <p class="card-text text-white mt-1">Blue Beetle</p>
+                                </div>
+
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item watch">
+                                        <a href="">
+                                            Watch option
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item trailer">
+                                        <a href="">
+                                            Trailer
+                                            <i class="fa fa-play"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="movie-cat">
+                            <div class="card movie-cat-card">
+                                <div class="img-box position-relative">
+                                    <div class="img-mask"></div>
+                                    <div>
+                                        <img class="card-img-top img-fluid" src="assets/images/Blue-Beetle-2023.jpg"
+                                            alt="Card image cap">
+                                    </div>
+                                    <a href="#" class="img-badge img-badge1">تخیلی</a>
+                                    <a href="#" class="img-badge img-badge2">اکشن</a>
+                                    <!-- <div class="overlay text-end p-4">
+                                        <h3 class="genres">
+                                            <span class="">
+                                                درام
+                                            </span>
+                                        </h3>
+                                    </div> -->
+                                </div>
+
+                                <div class="card-body movie-cat-body">
+                                    <span class="fa fa-star text-danger">
+                                        <i class="text-white">6.3</i>
+                                    </span>
+                                    <span class="fa fa-star-o ms-3 star text-info"></span>
+                                    <p class="card-text text-white mt-1">Blue Beetle</p>
+                                </div>
+
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item watch">
+                                        <a href="">
+                                            Watch option
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item trailer">
+                                        <a href="">
+                                            Trailer
+                                            <i class="fa fa-play"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button type="button" class="slider-nav" aria-label="Go left"></button>
+                    <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+                </div>
+            </div>
+        </div>
+        <div class="shape">
+            <div class="shape1"><img src="assets/images/shape1.png" alt="shape"></div>
+            <div class="shape2 rotateme"><img src="assets/images/shape2.svg" alt="shape"></div>
+            <div class="shape3"><img src="assets/images/shape3.svg" alt="shape"></div>
+            <div class="shape4"><img src="assets/images/shape4.svg" alt="shape"></div>
+            <div class="shape5"><img src="assets/images/shape5.png" alt="shape"></div>
+            <div class="shape6 rotateme"><img src="assets/images/shape4.svg" alt="shape"></div>
+            <div class="shape7"><img src="assets/images/shape4.svg" alt="shape"></div>
+            <div class="shape8 rotateme"><img src="assets/images/shape2.svg" alt="shape"></div>
+        </div>
+    </section>
+    <!-- --------------------------------slide Series------------------------- -->
+    <section id="slide-Series" class="position-relative">
+        <div class="container">
+            <div class="row mt-5 g-4 text-start Series">
+                <div class="d-flex justify-content-between">
+                    <h2 class="text-white mt-5 me-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-film" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z" />
+                        </svg>
+                        سریال
+                    </h2>
+                    <h2 class="mt-5 position-relative ms-5 more">
+                        <a href="" class="text-white">
+                            بیشتر
+                            <i class="fa fa-angle-left position-absolute my-1 pe-1 more"></i>
+                        </a>
+                    </h2>
+                </div>
+                <div dir="ltr"
+                    class="swiffy-slider slider-item-show4 slider-nav-outside-expand slider-nav-round slider-nav-page">
+                    <ul class="slider-container">
+                        <li>
+                            <div class="wrapper">
+                                <div class="card-Series">
+                                    <div class="poster"><img src="assets/images/walkingdaead-2.jpg" alt="walking-dead">
+                                    </div>
+                                    <div class="details text-end">
+                                        <h1 class="text-start">walkind dead</h1>
+                                        <div class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <span>8.9/10</span>
+                                        </div>
+                                        <div class="tags">
+                                            <a href="#"><span class="tag">آمریکا</span></a>
+                                            <a href="#"><span class="tag">ترسناک</span></a>
+                                            <a href="#"> <span class="tag">تخیلی</span></a>
+                                        </div>
+                                        <a href="#">
+                                            <p class="desc">
+                                                خلاصه داستان سریال مردگان متحرک: ریک که یک افسر پلیس است که بعد از گلوله
+                                                خوردن در حین ماموریت، چندین ماه در بیمارستان بیهوش بوده است. وقتی که او
+                                                بیدار می شود..
+                                            </p>
+                                        </a>
+                                        <div class="cast">
+                                            <h6>بازیگران</h6>
+                                            <ul>
+                                                <li><img src="https://i.postimg.cc/jqgkqhSb/cast-11.jpg"
+                                                        alt="Marco Andrews" title="Marco Andrews"></li>
+                                                <li><img src="https://i.postimg.cc/8P7X7r7r/cast-12.jpg"
+                                                        alt="Rebecca Floyd" title="Rebecca Floyd"></li>
+                                                <li><img src="https://i.postimg.cc/2SvHwRFk/cast-13.jpg
+                                                    " alt="Antonio Herrera" title="Antonio Herrera"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrapper">
+                                <div class="card-Series">
+                                    <div class="poster"><img src="assets/images/breaking bad.jpg" alt="breakingbad">
+                                    </div>
+                                    <div class="details text-end">
+                                        <h1 class="txt-start">braeking bad</h1>
+                                        <div class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <span>9.6/10</span>
+                                        </div>
+                                        <div class="tags">
+                                            <a href="#"><span class="tag">جنایی</span></a>
+                                            <a href="#"><span class="tag">درام</span></a>
+                                            <a href="#"><span class="tag">جنایی</span></a>
+                                        </div>
+                                        <a href="#">
+                                            <p class="desc">
+                                                خلاصه داستان سریال بریکینگ بد: افسارگسیخته داستان والتر وایت (برایان
+                                                کرانستون) دانشمند شیمی زحمتکش و بی‌حاشیه که معلم یک دبیرستان است را به
+                                                تصویر
+                                                می‌کشد.
+                                            </p>
+                                        </a>
+                                        <div class="cast">
+                                            <h6>بازیگران</h6>
+                                            <ul>
+                                                <li><img src="https://i.postimg.cc/jqgkqhSb/cast-11.jpg"
+                                                        alt="Marco Andrews" title="Marco Andrews"></li>
+                                                <li><img src="https://i.postimg.cc/8P7X7r7r/cast-12.jpg"
+                                                        alt="Rebecca Floyd" title="Rebecca Floyd"></li>
+                                                <li><img src="https://i.postimg.cc/2SvHwRFk/cast-13.jpg
+                                                    " alt="Antonio Herrera" title="Antonio Herrera"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrapper">
+                                <div class="card-Series">
+                                    <div class="poster"><img src="assets/images/leftovers-2.jpg" alt="leftovers"></div>
+                                    <div class="details text-end">
+                                        <h1 class="text-start">leftovers</h1>
+                                        <div class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <span>8.6/10</span>
+                                        </div>
+                                        <div class="tags">
+                                            <a href="#">
+                                                <span class="tag">درام</span>
+                                            </a>
+                                            <a href="">
+                                                <span class="tag">فانتزی</span>
+                                            </a>
+                                            <a href="">
+                                                <span class="tag">معمایی</span>
+                                            </a>
+                                        </div>
+                                        <a href="#">
+                                            <p class="desc">
+                                                خلاصه داستان: داستان فیلم حول ناپدید شدن های مرمو افراد در سرتاسر دنیا
+                                                به ویژه تعداد
+                                                از
+                                                اعضای گروه مپلتون که در حومه شهر زندگی می کنند, می باشد.
+                                            </p>
+                                        </a>
+                                        <div class="cast">
+                                            <h6>بازیگران</h6>
+                                            <ul>
+                                                <li><img src="assets/images/cast-left.webp" alt="Justin Theroux"
+                                                        title="Justin Theroux"></li>
+                                                <li><img src="assets/images/cast-left2.webp" alt="Amy Brenneman"
+                                                        title="Amy Brenneman"></li>
+                                                <li><img src="assets/images/cast-left3.webp" alt="Chris Zylka"
+                                                        title="Chris Zylka"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrapper">
+                                <div class="card-Series">
+                                    <div class="poster"><img src="assets/images/Vikings wallpaper1900.jpg"
+                                            alt="vikings"></div>
+                                    <div class="details text-end">
+                                        <h1 class="text-start">vikings</h1>
+                                        <div class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <span>8.4</span>
+                                        </div>
+                                        <div class="tags">
+                                            <a href="#"><span class="tag">تاریخی</span></a>
+                                            <a href="#"><span class="tag">اکشن</span></a>
+                                            <a href="#"><span class="tag">ماجراجویی</span></a>
+                                        </div>
+                                        <a href="#">
+                                            <p class="desc">
+                                                خلاصه داستان: راگنار لاثبروک یکی
+                                                از قهرمانان باستانی اسکاندیناوی در عصر وایکینگ‌ها است. راگنار، که یک
+                                                وایکینگ کشاورز است، برای اولین بار پیشنهاد حمله به غرب و انگلستان را
+                                                مطرح می‌کند.
+                                            </p>
+                                        </a>
+                                        <div class="cast">
+                                            <h6>بازیگران</h6>
+                                            <ul>
+                                                <li><img src="https://i.postimg.cc/jqgkqhSb/cast-11.jpg"
+                                                        alt="Marco Andrews" title="Marco Andrews"></li>
+                                                <li><img src="https://i.postimg.cc/8P7X7r7r/cast-12.jpg"
+                                                        alt="Rebecca Floyd" title="Rebecca Floyd"></li>
+                                                <li><img src="https://i.postimg.cc/2SvHwRFk/cast-13.jpg
+                                                    " alt="Antonio Herrera" title="Antonio Herrera"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrapper">
+                                <div class="card-Series">
+                                    <div class="poster"><img src="assets/images/hannibal.jpg" alt="hanibal">
+                                    </div>
+                                    <div class="details text-end">
+                                        <h1 class="text-start">hannibal</h1>
+                                        <div class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <span>8.3</span>
+                                        </div>
+                                        <div class="tags">
+                                            <a href="#"><span class="tag">جننایی</span></a>
+                                            <a href="#"><span class="tag">معمایی</span></a>
+                                            <a href="#"><span class="tag">ترسناک</span></a>
+                                        </div>
+                                        <a href="#">
+                                            <p class="desc">
+                                                خلاصه داستان: داستان این سریال درباره “ویل گراهام” یک مأمور اف.بی.آی
+                                                هست،که
+                                                تخصص و روش ویژه‌ایی در دستگیری قاتلین زنجیره‌ایی داره.
+                                            </p>
+                                        </a>
+                                        <div class="cast">
+                                            <h6>بازیگران</h6>
+                                            <ul>
+                                                <li><img src="https://i.postimg.cc/jqgkqhSb/cast-11.jpg"
+                                                        alt="Marco Andrews" title="Marco Andrews"></li>
+                                                <li><img src="https://i.postimg.cc/8P7X7r7r/cast-12.jpg"
+                                                        alt="Rebecca Floyd" title="Rebecca Floyd"></li>
+                                                <li><img src="https://i.postimg.cc/2SvHwRFk/cast-13.jpg
+                                                    " alt="Antonio Herrera" title="Antonio Herrera"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="wrapper">
+                                <div class="card-Series">
+                                    <div class="poster"><img src="assets/images/emily.jpg" alt="emily in paris"></div>
+                                    <div class="details text-end">
+                                        <h1 class="text-start">emily in paris</h1>
+                                        <div class="rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <span>7.9</span>
+                                        </div>
+                                        <div class="tags">
+                                            <a href="#"><span class="tag">کمدی</span></a>
+                                            <a href="#"><span class="tag">درام</span></a>
+                                            <a href="#"><span class="tag">عاشقانه</span></a>
+                                        </div>
+                                        <a href="#">
+                                            <p class="desc">
+                                                خلاصه داستان سریال امیلی در پاریس: یک زن جوان آمریکایی از غرب میانه توسط
+                                                یک شرکت بازاریابی در پاریس استخدام می شود تا دیدگاه آمریکایی در مورد
+                                                مسائل را به آنها ارائه دهد
+                                            </p>
+                                        </a>
+                                        <div class="cast">
+                                            <h6>بازیگران</h6>
+                                            <ul>
+                                                <li><img src="https://i.postimg.cc/jqgkqhSb/cast-11.jpg"
+                                                        alt="Marco Andrews" title="Marco Andrews"></li>
+                                                <li><img src="https://i.postimg.cc/8P7X7r7r/cast-12.jpg"
+                                                        alt="Rebecca Floyd" title="Rebecca Floyd"></li>
+                                                <li><img src="https://i.postimg.cc/2SvHwRFk/cast-13.jpg
+                                                    " alt="Antonio Herrera" title="Antonio Herrera"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button type="button" class="slider-nav" aria-label="Go left"></button>
+                    <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+                </div>
+
+
+
+                <button type="button" class="slider-nav" aria-label="Go left"></button>
+                <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+            </div>
+        </div>
+
+        <div class="shape">
+            <div class="shape1"><img src="assets/images/shape1.png" alt="shape"></div>
+            <div class="shape2 rotateme"><img src="assets/images/shape2.svg" alt="shape"></div>
+            <div class="shape3"><img src="assets/images/shape3.svg" alt="shape"></div>
+            <div class="shape4"><img src="assets/images/shape4.svg" alt="shape"></div>
+            <div class="shape5"><img src="assets/images/shape5.png" alt="shape"></div>
+            <div class="shape6 rotateme"><img src="assets/images/shape4.svg" alt="shape"></div>
+            <div class="shape7"><img src="assets/images/shape4.svg" alt="shape"></div>
+            <div class="shape8 rotateme"><img src="assets/images/shape2.svg" alt="shape"></div>
+        </div>
+    </section>
+    <!-- ---------------------------------footer-------------------------------- -->
+    <footer id="footer">
+        <div class="container">
+            <div class=" text-center">
+                <div class="footer-btn">
+                    <button class="btn btn-danger">وارد شدن به حساب</button>
+                </div>
+                <div class="footer-btn-hide mt-3 d-sm-block d-md-block d-lg-none">
+                    <button class="btn btn-dark">دانلود اپلیکیشن</button>
+                </div>
+                <div class="footer-media">
+                    <div class="flex-center">
+                        <a href="#"><i class="fa fa-github fa-2x icon-3d"></i></a>
+                        <a href="#"><i class="fa fa-twitter fa-2x icon-3d"></i></a>
+                        <a href="#"><i class="fa fa-facebook fa-2x icon-3d"></i></a>
+                        <a href="#"> <i class="fa fa-instagram fa-2x icon-3d"></i></a>
+                        <a href="#"> <i class="fa fa-whatsapp fa-2x icon-3d"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="link mt-4">
+                    <a href="#">اپلیکیشن</a>
+                    <a href="#">راهنما</a>
+                    <a href="#">برنامه های دیگر ما</a>
+                    <a href="#">قوانین سایت</a>
+                    <a href="#">دانلود</a>
+                    <a href="#">برنامه های دیگر ما</a>
+
+                </div>
+                <div class="link mt-3">
+                    <a href="#">اپلیکیشن</a>
+                    <a href="#">راهنما</a>
+                    <a href="#">برنامه های دیگر ما</a>
+                    <a href="#">قوانین سایت</a>
+                    <a href="#">دانلود</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
